@@ -46,7 +46,6 @@ window.addEventListener('scroll',()=>{
 
 
 // MOBILE-NAV HEADER EFFECT
-
 for(let i=0; i < nav.length; i++){
         navbtn[i].addEventListener('click',()=>{
             setTimeout(()=>{
@@ -79,19 +78,34 @@ close_menu_icon.addEventListener('click',()=>{
     closemenu();
 })
 
-//expand gallery
+function expandSection(divclient,height,txt_button,section){
+    if(divclient.clientHeight == height){
+        divclient.style.transition = `.4s ease-in-out`;
+        divclient.style.height = "auto";  
+        txt_button.innerHTML = `Close ${section}`;
+    }else{
+        divclient.style.transition = `.4s ease-in-out`;
+        divclient.style.height = `${height}px`;  
+        txt_button.innerHTML = 'Expand';
+    }
+}
+
+//expand gallery section
 var expand = document.getElementById('expand_gallery');
 var gallery = document.getElementById('gc_qobi');
 var txt = document.getElementById('h5_expand');
 
 expand.addEventListener('click',()=>{
-    if(gallery.style.height == "850px"){
-        gallery.style.transition = `.4s ease-in-out`;
-        gallery.style.height = "auto";  
-        txt.innerHTML = 'Close Gallery';
-    }else{
-        gallery.style.transition = `.4s ease-in-out`;
-        gallery.style.height = "850px";  
-        txt.innerHTML = 'Expand';
-    }
+    expandSection(gallery,"740",txt, 'Gallery');
 })
+
+//expand mymusic section
+var expandmusic = document.getElementById('expand_mymusic');
+var mymusic = document.getElementById('my_music_tray');
+var txt_music = document.getElementById('h5_expand_mymusic');
+
+expandmusic.addEventListener('click',()=>{
+    expandSection(mymusic,"600",txt_music,'My Music');
+})
+
+

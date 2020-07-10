@@ -34,7 +34,7 @@ body{
     font-style: normal !important;
     font-weight: 800 !important;
     font-size: 20px !important;
-    line-height: 38px !important;
+    line-height: 27px !important;
 }
 
 .box_qobi{
@@ -72,17 +72,18 @@ body{
 #mymusic .header h1,#gallery .header h1,
 #shows .header h1,#connect .header h1
 {   font-family: 'o_bold' !important; 
-    color: #2E4C49;
+    color:#87DFD6;
+    opacity: 0.34;
     transition: .4s ease-in-out;
     font-size: 32px !important;
     font-style: normal !important;
     font-weight: bold !important;
-    line-height: 60px !important;
+    line-height: 40px !important;
 }
 
 #mymusic .header h1:hover,#gallery .header h1:hover,
 #shows .header h1:hover,#connect .header h1:hover
-{color:#87DFD6;}
+{opacity: 1;}
 .body{
     width: 100%;
 }
@@ -136,6 +137,16 @@ body{
 
 #shows .img_container .img_holder img{width: auto;}
 
+#shows .desktop_img{
+    display: none !important;
+}
+
+#shows .mobile_img{
+    display: block !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
 .arr_container{
     transition: 4s ease-in-out !important;
     animation: pulse 2s infinite !important;
@@ -161,7 +172,7 @@ body{
     display: grid !important;
     align-items: center !important;
     justify-content: space-between;
-    width: 80% !important;
+    width: 100% !important;
     grid-template-columns: auto auto !important;
 
 }
@@ -170,8 +181,12 @@ body{
 
 #gallery .gallery_container{
     border: 0px solid white !important;
-    height: 850px;
+    height: 740px;
     overflow: hidden !important;
+}
+
+#gallery .left_gallery img{
+    height:500px !important;
 }
 
 .expand_gallery{
@@ -188,6 +203,23 @@ body{
     font-size: 16px;
     line-height: 22px;
     color: #01A9B4;
+}
+
+#mymusic #my_music_tray{
+    height: 600px;
+    overflow: hidden !important;
+    border: 0px solid white !important;
+}
+
+#mymusic .img_container{
+    width: 315px !important;
+    margin: 0 auto !important;
+}
+
+#mymusic .img_holder{
+    width: 300px !important;
+    height: 300px !important;
+    /* border: 1px solid white !important */
 }
 
 @media only screen and (min-width:768px){
@@ -218,10 +250,24 @@ body{
     .arr_container{
         margin-top: 0px !important;
     }
-    #gallery .gallery_container{
-        overflow: visible;
+    #gallery .gallery_container,
+    #mymusic #my_music_tray{
+        height: auto !important;
+        overflow: auto !important;
     }
+
     .expand_gallery{
+        display: none !important;
+    }
+    #connect .body{
+        width: 80% !important;
+    }
+
+    #shows .desktop_img{
+        display: block !important;
+    }
+    
+    #shows .mobile_img{
         display: none !important;
     }
 }
