@@ -36,9 +36,13 @@ a{
     text-decoration: none !important;
 }
 .containe{
-    width: 85%;
+    width: 90%;
     margin: 0 auto !important;
 }
+
+
+
+
 @media only screen and (min-width:768px){
     .company_name{
         font-family: 'o' !important;
@@ -52,6 +56,6 @@ a{
 }
 @media only screen and (min-width: 1200px){
     .containe{
-        width: 1170px;
+        width: 1120px;
     }
 }

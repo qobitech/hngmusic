@@ -65,6 +65,7 @@ for(let i=0; i < nav.length; i++){
             },500)
         })
 }
+
 for(let j=0; j < navitem.length; j++){
     navitem[j].addEventListener('click',()=>{
         closemenu();
@@ -76,4 +77,21 @@ var close_menu_icon = document.getElementById('close_menu_icon');
 
 close_menu_icon.addEventListener('click',()=>{
     closemenu();
+})
+
+//expand gallery
+var expand = document.getElementById('expand_gallery');
+var gallery = document.getElementById('gc_qobi');
+var txt = document.getElementById('h5_expand');
+
+expand.addEventListener('click',()=>{
+    if(gallery.style.height == "850px"){
+        gallery.style.transition = `.4s ease-in-out`;
+        gallery.style.height = "auto";  
+        txt.innerHTML = 'Close Gallery';
+    }else{
+        gallery.style.transition = `.4s ease-in-out`;
+        gallery.style.height = "850px";  
+        txt.innerHTML = 'Expand';
+    }
 })

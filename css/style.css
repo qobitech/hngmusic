@@ -8,28 +8,42 @@ body{
 #home{
     background-image: url('../assets/images/home/QA-qQfWJM0E.png');
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: top;
     background-size: cover;
     min-height: 100vh;
 }
-#home h3{
+#home h1{
     font-family: 'nun-bold' !important;
     color: #87DFD6 !important;
 }
 .txt_container{
     position: relative !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    margin-top: 210px !important;
 }
+#home .call_action_btn{ width: 100% !important;}
+
 .txt{
     /* border: 0px solid white; */
-    width: 63%;
+    width: 75%;
 }
+
+.txt_container .txt h1{
+    font-family: 'nun-bold', sans-serif !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    font-size: 20px !important;
+    line-height: 38px !important;
+}
+
 .box_qobi{
     display: block;
-    /* border: 1px solid white; */
-    width: 100px;
+    /* border: 1px solid white !important; */
+    width: 112px;
     height: 100px;
     position: absolute;
-    border: 3px solid #FBFD8A;
+    border: 4px solid #FBFD8A;
 }
 .tl{border-right: none; border-bottom: none;top:0;left:0;}
 .tr{border-left: none; border-bottom: none;top:0;right:0;}
@@ -42,9 +56,14 @@ body{
 }
 .btn_container span{display:block;width: 97%;height: 85%; border: 1px solid #FBFD8A;position: absolute;top:0;left:0}
 .btn_container button{
-    padding: 12px 20px; color: #fff;background: #01A9B4;font-family: 'nun-bold' !important;position: relative;z-index: 1;
+    padding: 15px 27px; color: #fff;background: #01A9B4;font-family: 'nun-bold' !important;position: relative;z-index: 1;font-size: 20px !important;
 }
 .call_action_btn,.scroll_down{justify-content: center;}
+
+.arr_container{
+    margin-top: 60px !important;
+}
+
 .arr_container span{
     display: block;
     color: #FBFD8A;
@@ -52,7 +71,15 @@ body{
 }
 #mymusic .header h1,#gallery .header h1,
 #shows .header h1,#connect .header h1
-{font-family: 'o_bold' !important; color: #2E4C49;transition: .4s ease-in-out;}
+{   font-family: 'o_bold' !important; 
+    color: #2E4C49;
+    transition: .4s ease-in-out;
+    font-size: 32px !important;
+    font-style: normal !important;
+    font-weight: bold !important;
+    line-height: 60px !important;
+}
+
 #mymusic .header h1:hover,#gallery .header h1:hover,
 #shows .header h1:hover,#connect .header h1:hover
 {color:#87DFD6;}
@@ -87,9 +114,9 @@ body{
 
 .call_to_action_section .txt{text-align: center;}
 
-.call_to_action_section .txt h4{color:#CCF8FB;font-family: 'nun-bold'!important;}
+.call_to_action_section .txt h4{color:#CCF8FB;font-family: 'nun-bold'!important;font-size: 28px !important;}
 
-.call_to_action_section .txt p{color:#fff;font-family: 'nun-bold';}
+.call_to_action_section .txt p{color:#fff;font-family: 'nun-bold';font-size: 16px !important;}
 
 .btns{text-align: center;}
 
@@ -100,6 +127,14 @@ body{
 #gallery .call_to_action_section .year{width:fit-content;margin: 0 auto !important;}
 
 #gallery .call_to_action_section span{display: block;width:100%;height: 5px;background: #FBFD8A;}
+
+#shows .img_container{
+    height: 765px !important
+}
+
+#shows .img_container .img_holder,#shows .img_container .img_holder {height: 100% !important;}
+
+#shows .img_container .img_holder img{width: auto;}
 
 .arr_container{
     transition: 4s ease-in-out !important;
@@ -122,9 +157,38 @@ body{
     }
 }
 
-#connect .body{flex-direction: column !important; align-items: center !important;}
+#connect .body{
+    display: grid !important;
+    align-items: center !important;
+    justify-content: space-between;
+    width: 80% !important;
+    grid-template-columns: auto auto !important;
+
+}
 
 #connect .body a{display: block;margin: 25px 0 !important;}
+
+#gallery .gallery_container{
+    border: 0px solid white !important;
+    height: 850px;
+    overflow: hidden !important;
+}
+
+.expand_gallery{
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 100px !important; */
+}
+
+.expand_gallery h5{
+    font-family: 'nun-bold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 22px;
+    color: #01A9B4;
+}
 
 @media only screen and (min-width:768px){
     .mymusic_gallery{
@@ -141,23 +205,58 @@ body{
     .btns{text-align: left;}
     .btns img{margin:0;margin-right: 20px;}
 
+    #mymusic .header h1,#gallery .header h1,
+    #shows .header h1,#connect .header h1
+    {
+        font-size: 48px !important;
+    }
+
     #gallery .call_to_action_section .year{width:fit-content;margin: 0 !important;}
+    #shows .img_container{
+        height: auto !important
+    }
+    .arr_container{
+        margin-top: 0px !important;
+    }
+    #gallery .gallery_container{
+        overflow: visible;
+    }
+    .expand_gallery{
+        display: none !important;
+    }
 }
 
 @media only screen and (min-width:992px){
     .call_action_btn,.scroll_down{justify-content: flex-end !important; }
         
-    #connect .body{flex-direction: row !important; align-items: center !important;}
+    #connect .body{
+        grid-template-columns: auto auto auto !important;    
+    }
 
-    #connect .body a{display: block;margin: 0 !important;}
+    #connect .body a{display: block;margin-bottom: 25px!important;}
+
+    .txt_container,#home .call_action_btn{
+        width: 482px !important;
+    }
+    .txt_container{margin:0 !important; margin-top: 220px !important;}
+    .txt_container .txt h1{
+        font-size: 26px !important;
+    }
 
 }
 
 @media only screen and (min-width:1200px){
+    #home{
+        background-size: 100% !important;
+    }
+    
     .body{
         width: 95%;
     }
     .mymusic_gallery{
         grid-template-columns: auto auto auto;
+    }
+    #connect .body{
+        grid-template-columns: auto auto auto auto auto auto !important;    
     }
 }
