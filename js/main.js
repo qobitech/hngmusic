@@ -4,13 +4,32 @@ var main_menu = document.getElementById('main_menu');
 var dot = document.getElementById('logo_dot');
 var menu_icon_container = document.getElementById('menu_icon_container');
 
+var navbtn = document.getElementsByClassName('nav_btn');
+var join_us_btn = document.getElementsByClassName('outside_btn_nav_qobi');
+var tp = document.getElementsByClassName('inside_btn_nav_qobi');
+var nav = document.getElementsByClassName('main_nav_mb');
+
+var navcontrol = document.getElementById('navbarToggleExternalContent');
+var navitem = document.getElementsByClassName('nav-item');
+
+
 var lastscrollup = 0;
+
+
+function closemenu(){
+    navcontrol.classList.remove('show');
+    tp[0].style.transition = ".4s ease-in";            
+    tp[0].style.opacity = 0;
+    join_us_btn[0].style.transition = ".4s ease-in";            
+    join_us_btn[0].style.opacity = 1;
+}
 
 window.addEventListener('scroll',()=>{
     var st = window.pageYOffset || document.documentElement.scrollTop;
     if(st > lastscrollup){
         header.classList.remove('menuDown');
         header.classList.add('menuUp');
+        closemenu();
     }else{
         header.classList.remove('menuUp');
         header.classList.add('menuDown');
@@ -27,17 +46,13 @@ window.addEventListener('scroll',()=>{
 
 
 // MOBILE-NAV HEADER EFFECT
-var navbtn = document.getElementsByClassName('nav_btn');
-var join_us_btn = document.getElementsByClassName('outside_btn_nav_qobi');
-var tp = document.getElementsByClassName('inside_btn_nav_qobi');
-var nav = document.getElementsByClassName('main_nav_mb');
 
 for(let i=0; i < nav.length; i++){
         navbtn[i].addEventListener('click',()=>{
             setTimeout(()=>{
                 if(nav[i].clientHeight > 300){
-                join_us_btn[i].style.transition = ".4s ease-out";
-                join_us_btn[i].style.opacity = 0;
+                    join_us_btn[i].style.transition = ".4s ease-out";
+                    join_us_btn[i].style.opacity = 0;
                     tp[i].style.transition = ".4s ease-out";
                     tp[i].style.opacity = 1;
                 }
@@ -50,16 +65,9 @@ for(let i=0; i < nav.length; i++){
             },500)
         })
 }
-var navcontrol = document.getElementById('navbarToggleExternalContent');
-var navitem = document.getElementsByClassName('nav-item');
-
 for(let j=0; j < navitem.length; j++){
     navitem[j].addEventListener('click',()=>{
-        navcontrol.classList.remove('show');
-        tp[0].style.transition = ".4s ease-in";            
-        tp[0].style.opacity = 0;
-        join_us_btn[0].style.transition = ".4s ease-in";            
-        join_us_btn[0].style.opacity = 1;
+        closemenu();
     })
 }
 
@@ -67,10 +75,5 @@ for(let j=0; j < navitem.length; j++){
 var close_menu_icon = document.getElementById('close_menu_icon');
 
 close_menu_icon.addEventListener('click',()=>{
-    navcontrol.classList.remove('show');
-    tp[0].style.transition = ".4s ease-in";                    
-    tp[0].style.opacity = 0;
-    join_us_btn[0].style.transition = ".4s ease-in";            
-    join_us_btn[0].style.opacity = 1;
+    closemenu();
 })
-
