@@ -63,3 +63,14 @@ for(let j=0; j < navitem.length; j++){
     })
 }
 
+// close menu
+var close_menu_icon = document.getElementById('close_menu_icon');
+
+close_menu_icon.addEventListener('click',()=>{
+    navcontrol.classList.remove('show');
+    tp[0].style.transition = ".4s ease-in";                    
+    tp[0].style.opacity = 0;
+    join_us_btn[0].style.transition = ".4s ease-in";            
+    join_us_btn[0].style.opacity = 1;
+})
+
