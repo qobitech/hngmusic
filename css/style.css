@@ -206,7 +206,7 @@ body{
 }
 
 #mymusic #my_music_tray{
-    height: 600px;
+    height: 600px ;
     overflow: hidden !important;
     border: 0px solid white !important;
 }
@@ -269,6 +269,10 @@ body{
     
     #shows .mobile_img{
         display: none !important;
+    }
+
+    #gallery .left_gallery img{
+        height:808px !important;
     }
 }
 

@@ -38,7 +38,8 @@ window.addEventListener('scroll',()=>{
         dot.style.transition = `.4s ease-in-out`;
         dot.style.backgroundColor= st <= 0 ? `#87DFD6` : `#FBFD8A` ;     
         menu_icon_container.style.transition = `.4s ease-in-out`;
-        menu_icon_container.style.backgroundColor= st <= 0 ? `#87DFD6` : `#FBFD8A` ;     
+        menu_icon_container.style.backgroundColor= st <= 0 ? `#87DFD6` : `rgba(0,0,0,0)` ;
+        menu_icon_container.style.border= st <= 0 ? `none` : `2px solid #FBFD8A` ;     
     }
 
     lastscrollup = st <= 0 ? 0 : st;
@@ -87,7 +88,9 @@ function expandSection(divclient,height,txt_button,section){
         divclient.style.transition = `.4s ease-in-out`;
         divclient.style.height = `${height}px`;  
         txt_button.innerHTML = 'Expand';
+        divclient.scrollIntoView();
     }
+    console.log(divclient.clientHeight)
 }
 
 //expand gallery section
