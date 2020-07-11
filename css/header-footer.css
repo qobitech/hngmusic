@@ -15,16 +15,16 @@ header{
 }
 
 .company_name{
-    font-family: 'o' !important;
+    font-family: 'Orbitron' !important;
     font-size: 32px !important;
 }
-.company_brand a{color: #fff;font-family: 'o_bold' !important;}
+.company_brand a{color: #fff;font-family: 'Orbitron' !important;}
 
 .company_brand span{display: block; width: 14px; height: 12px; background: #87DFD6; margin-top: 10px;}
 
 
 .navbar-nav a{
-    font-family: 'nun-bold' !important;
+    font-family: 'Nunito' !important;
     font-size: 1.2em;
     color: #fff;
     transition: .4s ease-in-out;

@@ -13,8 +13,11 @@ body{
     min-height: 100vh;
 }
 #home h1{
-    font-family: 'nun-bold' !important;
+    font-family: 'Nunito' !important;
     color: #87DFD6 !important;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 38px;
 }
 .txt_container{
     position: relative !important;
@@ -30,7 +33,7 @@ body{
 }
 
 .txt_container .txt h1{
-    font-family: 'nun-bold', sans-serif !important;
+    font-family: 'Nunito', sans-serif !important;
     font-style: normal !important;
     font-weight: 800 !important;
     font-size: 20px !important;
@@ -55,9 +58,11 @@ body{
     position: relative;
 }
 .btn_container span{display:block;width: 97%;height: 85%; border: 1px solid #FBFD8A;position: absolute;top:0;left:0}
+
 .btn_container button{
-    padding: 15px 27px; color: #fff;background: #01A9B4;font-family: 'nun-bold' !important;position: relative;z-index: 1;font-size: 20px !important;
+    width:160.73px;height:45.45px; color: #fff;background: #01A9B4;font-family: 'Nunito' !important;position: relative;z-index: 1;font-size: 12px !important;
 }
+
 .call_action_btn,.scroll_down{justify-content: center;}
 
 .arr_container{
@@ -71,7 +76,7 @@ body{
 }
 #mymusic .header h1,#gallery .header h1,
 #shows .header h1,#connect .header h1
-{   font-family: 'o_bold' !important; 
+{   font-family: 'Orbitron' !important; 
     color:#87DFD6;
     opacity: 0.34;
     transition: .4s ease-in-out;
@@ -115,9 +120,9 @@ body{
 
 .call_to_action_section .txt{text-align: center;}
 
-.call_to_action_section .txt h4{color:#CCF8FB;font-family: 'nun-bold'!important;font-size: 28px !important;}
+.call_to_action_section .txt h4{color:#CCF8FB;font-family: 'Nunito'!important;font-size: 28px !important;}
 
-.call_to_action_section .txt p{color:#fff;font-family: 'nun-bold';font-size: 16px !important;}
+.call_to_action_section .txt p{color:#fff;font-family: 'Nunito';font-size: 16px !important;}
 
 .btns{text-align: center;}
 
@@ -197,7 +202,7 @@ body{
 }
 
 .expand_gallery h5{
-    font-family: 'nun-bold';
+    font-family: 'Nunito';
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
@@ -206,7 +211,7 @@ body{
 }
 
 #mymusic #my_music_tray{
-    height: 600px ;
+    height: 1720px ;
     overflow: hidden !important;
     border: 0px solid white !important;
 }
@@ -273,6 +278,9 @@ body{
 
     #gallery .left_gallery img{
         height:808px !important;
+    }
+    .btn_container button{
+        width:244px;height:69px;font-size: 20px !important;
     }
 }
 

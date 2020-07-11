@@ -108,7 +108,7 @@ var mymusic = document.getElementById('my_music_tray');
 var txt_music = document.getElementById('h5_expand_mymusic');
 
 expandmusic.addEventListener('click',()=>{
-    expandSection(mymusic,"600",txt_music,'My Music');
+    expandSection(mymusic,"1720",txt_music,'My Music');
 })
 
 
