@@ -55,7 +55,7 @@ body{
     padding: 5px 0px 5px 5px;
     position: relative;
 }
-.btn_container span{display:block;width: 97%;height: 85%;position: absolute;top:0;left:0}
+.btn_container span{display:block;width: 97%;height: 85%; border: 1px solid #FBFD8A;position: absolute;top:0;left:0}
 
 .btn_container button{
     width:160.73px;height:45.45px; color: #fff;background: #01A9B4;font-family: var(--text-font) !important;position: relative;z-index: 1;font-size: 12px !important;
@@ -99,6 +99,7 @@ body{
 .left_gallery .content,
 .right_gallery .content{
     width: 100% !important;
+
 }
 .img_container{
     width: 100%;
