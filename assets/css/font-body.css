@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'Orbitron';
+    src: url('../fonts/orbitron/Orbitron-Regular.ttf');
+}
+@font-face{
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Regular.ttf');
+}
+
+:root{
+    --header-font : 'Orbitron', serif;
+    --text-font : 'Nunito', serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+    text-size-adjust: inherit;
+    font-size-adjust: inherit;
+}
+h1,h2,h3,h4{
+    font-family: var(--header-font) !important;
+}
+h5,h6,p,label,button,a{
+    font-family: var(--text-font) !important;
+}
+a{
+    text-decoration: none !important;
+}
+.containe{
+    width: 90%;
+    margin: 0 auto !important;
+}
+
+@media only screen and (min-width:768px){
+    .company_name{
+        font-family: var(--header-font) !important;
+        font-size: 26px !important;
+    }
+}
+@media only screen and (min-width:1024px){
+    .containe{
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 1200px){
+    .containe{
+        width: 1170px;
+    }
+}

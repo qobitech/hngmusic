@@ -1,4 +1,7 @@
 // DROP DOWN MENU
+var logoimg1 = `${window.location.href.substring(0,window.location.href.indexOf('/',window.location.href.indexOf('/')+2))}/assets/images/icons/logo/logo.png`;
+var logoimg2 =  `${window.location.href.substring(0,window.location.href.indexOf('/',window.location.href.indexOf('/')+2))}/assets/images/icons/logo/Group2.png`;
+
 var header = document.getElementById('header_nav');
 var main_menu = document.getElementById('main_menu');
 var dot = document.getElementById('logo_dot');
@@ -36,7 +39,7 @@ window.addEventListener('scroll',()=>{
         main_menu.style.transition = `.4s ease-in-out`;
         main_menu.style.backgroundColor= st <= 0 ? `rgba(1,169,180,0)` : `rgba(1,169,180,.9)` ;     
         dot.style.transition = `.4s ease-in-out`;
-        dot.style.backgroundColor= st <= 0 ? `#87DFD6` : `#FBFD8A` ;     
+        dot.src= st <= 0 ? logoimg1 : logoimg2 ;     
         menu_icon_container.style.transition = `.4s ease-in-out`;
         menu_icon_container.style.backgroundColor= st <= 0 ? `#87DFD6` : `rgba(0,0,0,0)` ;
         menu_icon_container.style.border= st <= 0 ? `none` : `2px solid #FBFD8A` ;     
